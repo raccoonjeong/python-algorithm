@@ -44,8 +44,17 @@ print(vertical)
 result = 0
 
 while True:
-    d += 1
+    d -= 1
     d %= 4
+    # 0 / 4 -> 몫 : 0, *나 : 0*
+    # 1 / 4 -> 몫 : 0, *나 : 1*
+    # 2 / 4 -> 몫 : 0, *나 : 2*
+    # 3 / 4 -> 몫 : 0, *나 : 3*
+    # 4
+    # 5
+    # 6
+
+
 
     if (d == 0):
         # 북쪽
@@ -59,7 +68,7 @@ while True:
     elif (d == 3):
         # 서쪽
         x -= 1
-    # print('방문해봄!', vertical[y][x], ".... y", y, "x", x)
+    print('방문해봄!', vertical[y][x], ".... y", y, "x", x)
 
     if(y >= 0 and y < n and x >= 0 and x < m and vertical[y][x] == 0):
         # print('새로 방문했다!!!', vertical[y][x], ".... y", y, "x", x)
@@ -81,7 +90,7 @@ while True:
         # 서쪽
         x += 1
 
-    # print('돌아왔음...', vertical[y][x], ".... y", y, "x", x)
+    print('돌아왔음...', vertical[y][x], ".... y", y, "x", x)
 
     if (y < 0 or y >= n or x < 1 or x >= m or vertical[y][x] == 1):
         break
